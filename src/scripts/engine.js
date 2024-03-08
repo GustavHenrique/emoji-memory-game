@@ -30,6 +30,9 @@ for (let i = 0; i < emojis.length; i++) {
 }
 
 function handleClick() {
+    if (this.classList.contains('box-open') || this.classList.contains('box-matched')) {
+        return;
+    }
     if (openCards.length < 2) {
         this.classList.add('box-open');
         openCards.push(this);
